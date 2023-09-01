@@ -1,12 +1,11 @@
-{{- if eq .Values.serviceName "devopx" -}}
-
+{{- if eq .Values.serviceName "devopx" }}
 apiVersion: v1
 kind: Service
 metadata:
   creationTimestamp: null
   labels:
     app: nginx
-  name: {{ .Values.serviceName }}
+  name: {{ .Values.serviceName }}-service
 spec:
   ports:
   - port: 80
@@ -17,5 +16,4 @@ spec:
   type: LoadBalancer
 status:
   loadBalancer: {}
-  
-{{ end }}
+{{- end }}
