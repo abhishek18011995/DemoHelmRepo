@@ -1,4 +1,4 @@
-{{- if eq .Values.serviceName "devopx" }}
+{{- if eq .Values.serviceName "devopx" -}}
 apiVersion: v1
 kind: Service
 metadata:
